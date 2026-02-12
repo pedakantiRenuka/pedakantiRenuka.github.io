@@ -93,7 +93,7 @@ nav {
     min-height: 100vh;
     display: flex;
     align-items: center;
-    padding: 6rem 2rem 4rem;
+    padding: 8rem 2rem 4rem;
     position: relative;
     overflow: hidden;
 }
@@ -685,6 +685,10 @@ footer {
         gap: 2rem;
     }
 
+    .hero {
+        padding: 8rem 2rem 4rem;
+    }
+
     .hero-text h1 {
         font-size: 3rem;
     }
@@ -700,28 +704,171 @@ footer {
     .projects-grid {
         grid-template-columns: 1fr;
     }
+    
+    .certifications-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 640px) {
+    /* Enhanced mobile navigation */
+    nav {
+        padding: 1rem 0;
+    }
+    
+    .nav-container {
+        padding: 0 1rem;
+    }
+    
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .nav-links {
+        gap: 0.8rem;
+        font-size: 0.85rem;
+    }
+    
+    /* Hero section mobile fixes */
+    .hero {
+        padding: 9rem 1.5rem 3rem;
+        min-height: auto;
+    }
+
     .hero-text h1 {
         font-size: 2.5rem;
+        line-height: 1.2;
+        margin-bottom: 1rem;
     }
 
     .hero-text .subtitle {
         font-size: 1.2rem;
+        margin-bottom: 1rem;
+    }
+    
+    .hero-text p {
+        font-size: 1rem;
+        margin-bottom: 2rem;
     }
 
     .cta-buttons {
         flex-direction: column;
-    }
-
-    .nav-container {
-        padding: 0 1rem;
-    }
-
-    .nav-links {
         gap: 1rem;
-        font-size: 0.9rem;
+    }
+    
+    .btn {
+        padding: 0.875rem 2rem;
+        font-size: 0.95rem;
+        text-align: center;
+    }
+    
+    /* Visual card mobile */
+    .visual-card {
+        padding: 2rem;
+    }
+    
+    .visual-card h3 {
+        font-size: 1.5rem;
+    }
+    
+    /* Section titles mobile */
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    /* Projects grid mobile */
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .project-card {
+        min-width: 0;
+    }
+    
+    .project-content {
+        padding: 2rem;
+    }
+    
+    /* Skills grid mobile */
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .skill-category {
+        padding: 2rem;
+    }
+    
+    /* Certifications mobile */
+    .certifications-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    /* About section mobile */
+    .about-content {
+        gap: 3rem;
+    }
+    
+    .about-text p {
+        font-size: 1rem;
+    }
+    
+    /* Contact section mobile */
+    .contact-content {
+        gap: 3rem;
+    }
+    
+    .contact-item {
+        font-size: 1rem;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+    .hero {
+        padding: 8rem 1rem 2rem;
+    }
+    
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-text .subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .nav-links {
+        gap: 0.6rem;
+        font-size: 0.8rem;
+    }
+    
+    .logo {
+        font-size: 1.3rem;
+    }
+    
+    .section-title {
+        font-size: 1.75rem;
+    }
+}
+
+/* Landscape mobile devices */
+@media (max-width: 968px) and (orientation: landscape) {
+    .hero {
+        padding: 7rem 2rem 3rem;
+        min-height: auto;
+    }
+}
+
+/* Safe area for devices with notches */
+@supports (padding-top: env(safe-area-inset-top)) {
+    nav {
+        padding-top: max(1.5rem, env(safe-area-inset-top));
+    }
+    
+    .hero {
+        padding-top: calc(8rem + env(safe-area-inset-top));
     }
 }
 
